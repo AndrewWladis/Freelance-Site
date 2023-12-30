@@ -33,7 +33,7 @@ export default function Navigation() {
     return (
         <>
             {isDesktop ? (
-                <Navbar onMenuOpenChange={setIsMenuOpen} className='bg-white'>
+                <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
                     <NavbarContent>
                         <NavbarMenuToggle
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -43,11 +43,11 @@ export default function Navigation() {
                             <h1 className="text-xl font-semibold">Andrew Wladis</h1>
                         </NavbarBrand>
                     </NavbarContent>
-                    <NavbarMenu className='bg-white shadow-lg'>
+                    <NavbarMenu>
                         {menuItems.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <Link
-                                    className="w-full text-black"
+                                    className="w-full text-white"
                                     href={`#${item.toLowerCase()}`}
                                     size="lg"
                                 >
@@ -58,7 +58,7 @@ export default function Navigation() {
                     </NavbarMenu>
                 </Navbar>
             ) : (
-                <Navbar onMenuOpenChange={setIsMenuOpen} className='bg-white'>
+                <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
                     <NavbarContent>
                         <NavbarBrand>
                             <h1 className="text-xl font-semibold">Andrew Wladis</h1>
@@ -66,7 +66,7 @@ export default function Navigation() {
                         {menuItems.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <Link
-                                    className="w-full text-black"
+                                    className="w-full text-white"
                                     href={`#${item.toLowerCase()}`}
                                     size="lg"
                                 >

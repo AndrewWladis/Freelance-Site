@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Navigation from './Navbar';
+import Services from './Services';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -22,15 +23,16 @@ export default function Home() {
       window.removeEventListener('resize', updateWindowWidth);
     };
   }, []);
-  
+
   return (
-    <main className="w-full scroll-smooth">
+    <main style={{ background: "linear-gradient(164deg, rgba(18,17,17,1) 0%, rgba(45,23,46,1) 35%, rgba(25,25,25,1) 100%)" }} className="w-full">
       <Navigation />
-      <div className='w-full h-screen flex justify-center'>
-        <p className='text-xl font-semibold text-center' style={{marginTop: 80, marginRight: (windowWidth / 6), marginLeft: (windowWidth / 6)}}>
-          Welcome, I'm <b>Andrew Wladis</b>, a passionate and creative software contractor dedicated to crafting visually appealing websites that not only captivate viewers but also elevate brands.
+      <section id="about" className='w-full flex justify-center' style={{ marginTop: 170 }}>
+        <p className='text-xl font-semibold text-center text-white' style={{ paddingTop: 80, marginRight: (windowWidth / 6), marginLeft: (windowWidth / 6) }}>
+          Welcome, I'm <b>Andrew Wladis</b>, a passionate and creative freelance software developer dedicated to crafting visually appealing websites that not only captivate viewers but also elevate brands.
         </p>
-      </div>
+      </section>
+      <Services />
     </main>
   )
 }
