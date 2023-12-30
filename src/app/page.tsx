@@ -37,8 +37,8 @@ export default function Home() {
         </p>
       </section>
       <Services />
-      <section id="skills" style={{ margin: 10 }}>
-        {/* add a header here that says I am proffescent in...  */}
+      <section id="skills" style={{ margin: 10, marginTop: 100 }}>
+        <h3 className='text-xl font-semibold text-center text-white'>I am proficient in...</h3>
         <div className='w-full flex flex-row flex-wrap items-center justify-center' style={{ margin: 10 }}>
           <div style={{ margin: 5 }}>
             <FaHtml5 size="4em" />
