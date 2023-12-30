@@ -20,13 +20,13 @@ export default function Services() {
             <Card style={{ margin: 10, maxWidth: 400, height: 175, backgroundColor: 'transparent' }}>
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col w-full">
-                        <p className="text-md text-center">Responsive Design</p>
+                        <p className="text-md text-center">Responsive and Accessible</p>
                     </div>
                 </CardHeader>
                 <Divider />
                 <CardBody>
                     <p className="text-center">
-                        I ensure your website will look great on all devices with responsive design, providing a seamless experience across desktops, tablets, and mobile devices.
+                        I ensure your website will look great on all devices with responsive design, providing a seamless and accessible experience across desktops, tablets, and mobile devices.
                     </p>
                 </CardBody>
             </Card>

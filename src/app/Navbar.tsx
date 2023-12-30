@@ -8,10 +8,10 @@ export default function Navigation() {
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        setIsDesktop(window.innerWidth < 600);
+        setIsDesktop(window.innerWidth < 500);
 
         const handleResize = () => {
-          setIsDesktop(window.innerWidth < 600);
+          setIsDesktop(window.innerWidth < 500);
         };
   
         window.addEventListener('resize', handleResize);
@@ -25,7 +25,6 @@ export default function Navigation() {
     const menuItems = [
         "About",
         "Services",
-        "Portfolio",
         "Skills",
         "Contact"
     ];
