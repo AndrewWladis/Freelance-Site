@@ -6,35 +6,13 @@ import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiMongodb } from "reac
 
 interface SkillsProps {
     cursorX: number;
+    windowWidth: number;
 }
   
-const Skills: React.FC<SkillsProps> = ({ cursorX }) => {
-    const [windowWidth, setWindowWidth] = useState(0);
-
-    useEffect(() => {
-        // Function to update window width
-        const updateWindowWidth = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        // Initial window width
-        updateWindowWidth();
-
-        // Add event listener for window resize
-        window.addEventListener('resize', updateWindowWidth);
-
-        // Cleanup: remove event listener on component unmount
-        return () => {
-            window.removeEventListener('resize', updateWindowWidth);
-        };
-    }, []);
-
-    useEffect(() => {
-        console.log(windowWidth)
-    }, [windowWidth])
+const Skills: React.FC<SkillsProps> = ({ cursorX, windowWidth }) => {
 
     return (
-        <section id="skills" style={{ margin: 10, marginTop: 100, marginBottom: 100 }}>
+        <section id="skills" style={{ margin: 10, marginTop: 125, marginBottom: 125 }}>
             <h3 className='text-xl font-semibold text-center text-white'>My Technical Skills Include:</h3>
             {(windowWidth > 1000) ? (
                 <div className='w-full flex flex-row flex-wrap items-center justify-center' style={{ margin: 10 }}>
