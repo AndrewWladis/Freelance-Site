@@ -8,10 +8,10 @@ export default function Navigation() {
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        setIsDesktop(window.innerWidth < 500);
+        setIsDesktop(window.innerWidth < 415);
 
         const handleResize = () => {
-          setIsDesktop(window.innerWidth < 500);
+          setIsDesktop(window.innerWidth < 415);
         };
   
         window.addEventListener('resize', handleResize);
@@ -38,9 +38,6 @@ export default function Navigation() {
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                             className="sm:hidden"
                         />
-                        <NavbarBrand>
-                            <h1 className="text-xl font-semibold">Andrew Wladis</h1>
-                        </NavbarBrand>
                     </NavbarContent>
                     <NavbarMenu>
                         {menuItems.map((item, index) => (
@@ -58,16 +55,17 @@ export default function Navigation() {
                 </Navbar>
             ) : (
                 <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
-                    <NavbarContent>
-                        <NavbarBrand>
-                            <h1 className="text-xl font-semibold">Andrew Wladis</h1>
-                        </NavbarBrand>
+                    <NavbarContent className="w-full flex flex-row justify-center items-center">
                         {menuItems.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <Link
                                     className="w-full text-white"
                                     href={`#${item.toLowerCase()}`}
                                     size="lg"
+                                    style={{
+                                        fontSize: 25,
+                                        fontWeight: 700
+                                    }}
                                 >
                                     {item}
                                 </Link>

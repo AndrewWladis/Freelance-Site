@@ -3,11 +3,11 @@ import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@n
 
 export default function Services() {
     return (
-        <section id="services" className="w-full flex flex-row flex-wrap justify-center items-center" style={{ marginTop: 250 }}>
+        <section id="services" className="w-full flex flex-row flex-wrap justify-center items-center" style={{ paddingTop: 250 }}>
             <Card style={{ margin: 10, maxWidth: 400, height: 175, backgroundColor: 'transparent' }}>
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col w-full">
-                        <p className="text-md text-center">Web Design</p>
+                        <p className="text-center" style={{ fontWeight: 700, fontSize: 20 }}>Web Design</p>
                     </div>
                 </CardHeader>
                 <Divider />
@@ -20,7 +20,7 @@ export default function Services() {
             <Card style={{ margin: 10, maxWidth: 400, height: 175, backgroundColor: 'transparent' }}>
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col w-full">
-                        <p className="text-md text-center">Responsive and Accessible</p>
+                        <p className="text-center" style={{ fontWeight: 700, fontSize: 20 }}>Responsive and Accessible</p>
                     </div>
                 </CardHeader>
                 <Divider />
@@ -33,7 +33,7 @@ export default function Services() {
             <Card style={{ margin: 10, maxWidth: 400, height: 175, backgroundColor: 'transparent' }}>
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col w-full">
-                        <p className="text-md text-center">UI/UX Design</p>
+                        <p className="text-center" style={{ fontWeight: 700, fontSize: 20 }}>UI/UX Design</p>
                     </div>
                 </CardHeader>
                 <Divider />

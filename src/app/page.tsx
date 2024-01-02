@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Navigation from './Navbar';
 import Services from './Services';
 import Skills from './Skills';
+import Contact from './Contact';
+import About from './About';
 
 export default function Home() {
   const [cursorX, setCursorX] = useState(0);
@@ -27,22 +29,19 @@ export default function Home() {
   }, []);
 
   const handleMouseMove = (e: any) => {
-      setCursorX(e.clientX);
+    setCursorX(e.clientX);
   };
 
   return (
     <main onMouseMove={handleMouseMove} style={{ background: "linear-gradient(164deg, rgba(18,17,17,1) 0%, rgba(45,23,46,1) 35%, rgba(25,25,25,1) 100%)" }} className="w-full">
       <Navigation />
-      <section id="about" className='w-full flex justify-center' style={{ paddingTop: 250 }}>
-        <p className='text-xl font-semibold text-center text-white' style={{ marginRight: (windowWidth / 6), marginLeft: (windowWidth / 6) }}>
-          Welcome, I'm <b>Andrew Wladis</b>, a passionate and creative freelance software developer dedicated to crafting visually appealing websites that not only captivate viewers but also elevate brands.
-        </p>
-      </section>
+      <About windowWidth={windowWidth} />
       <Services />
-      <Skills cursorX={cursorX} />
-      <section id="contact" className='w-full flex justify-center'>
-        <h3 className='text-xl font-semibold text-center text-white'>Feel free to reach out to me using the contact information below:</h3>
-      </section>
+      <Skills cursorX={cursorX} windowWidth={windowWidth} />
+      <Contact />
+      <h3 className='text-xl font-semibold text-center text-white' style={{ padding: 25 }}>
+        Email for inquiries or collaboration opportunities at <a href={`mailto:andrewwladis@gmail.com`} style={{ color: '#67e8f9', fontWeight: 800 }}>andrewwladis@gmail.com</a>
+      </h3>
     </main>
   )
 }

@@ -12,7 +12,7 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ cursorX, windowWidth }) => {
 
     return (
-        <section id="skills" style={{ margin: 10, marginTop: 125, marginBottom: 125 }}>
+        <section id="skills" style={{ margin: 10, paddingTop: 125, marginBottom: 125 }}>
             <h3 className='text-xl font-semibold text-center text-white'>My Technical Skills Include:</h3>
             {(windowWidth > 1000) ? (
                 <div className='w-full flex flex-row flex-wrap items-center justify-center' style={{ margin: 10 }}>
