@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <main onMouseMove={handleMouseMove} style={{ background: "linear-gradient(164deg, rgba(18,17,17,1) 0%, rgba(45,23,46,1) 35%, rgba(25,25,25,1) 100%)" }} className="w-full">
+    <main onMouseMove={handleMouseMove} style={{ background: "linear-gradient(166deg, rgba(145,145,145,1) 0%, rgba(68,68,68,1) 47%, rgba(19,19,19,1) 97%)" }} className="w-full">
       <Navigation />
       <About windowWidth={windowWidth} />
       <Services />

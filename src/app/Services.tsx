@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@n
 
 export default function Services() {
     return (
-        <section id="services" className="w-full flex flex-row flex-wrap justify-center items-center" style={{ paddingTop: 250 }}>
+        <section id="services" className="w-full flex flex-row flex-wrap justify-center items-center" style={{ paddingTop: 125 }}>
             <Card style={{ margin: 10, maxWidth: 400, height: 175, backgroundColor: 'transparent' }}>
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col w-full">

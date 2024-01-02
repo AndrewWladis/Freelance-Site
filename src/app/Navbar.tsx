@@ -8,10 +8,11 @@ export default function Navigation() {
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        setIsDesktop(window.innerWidth < 415);
+        setIsDesktop(window.innerWidth < 500);
 
         const handleResize = () => {
-          setIsDesktop(window.innerWidth < 415);
+          setIsDesktop(window.innerWidth < 500);
+          console.log(window.innerWidth)
         };
   
         window.addEventListener('resize', handleResize);
@@ -63,7 +64,7 @@ export default function Navigation() {
                                     href={`#${item.toLowerCase()}`}
                                     size="lg"
                                     style={{
-                                        fontSize: 25,
+                                        fontSize: '2rem',
                                         fontWeight: 700
                                     }}
                                 >
