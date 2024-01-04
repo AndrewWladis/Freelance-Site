@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 
 export default function Services() {
     return (
