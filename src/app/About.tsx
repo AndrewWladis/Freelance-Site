@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({ windowWidth }) => {
                     paddingTop: '10vh'
                 }}
             >
-                Welcome, I'm <b style={{ color: '#21b3ed' }}>Andrew Wladis</b>, <br></br> a freelance software developer.
+                Welcome, I'm <b style={{ color: '#21b3ed', fontWeight: '900', textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}>Andrew Wladis</b>, <br></br> a freelance software developer.
             </p>
             <p className='text-xl font-semibold text-center' style={{ color: '#d4d4d8', alignSelf: 'end', padding: '10vh' }}>
                 <span className='underline' style={{ fontWeight: '800', color: '#faf325' }}><a href="#contact">Let me know how I can help you</a></span><br></br>craft a visually appealing website <br></br>that will not only captivate viewers<br></br> but also elevate your brand.
